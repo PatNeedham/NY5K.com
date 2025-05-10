@@ -1,0 +1,173 @@
+.race-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.race-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.race-card-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 60%; /* Aspect ratio 5:3 */
+  overflow: hidden;
+}
+
+.race-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.race-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.inaugural {
+  background-color: #3b82f6;
+}
+
+.registration-closed {
+  background-color: #ef4444;
+}
+
+.race-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.race-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  /* Ensure title is always two lines for consistency */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.86rem; /* approx 2 lines */
+}
+
+.race-date {
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.race-location {
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  /* Ensure location is always one line */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .race-card-content {
+    padding: 1.5rem;
+  }
+  
+  .race-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+.race-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.race-card-footer {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.view-details-button, .find-similar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.view-details-button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #2563eb;
+}
+
+.find-similar-button {
+  background-color: transparent;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.find-similar-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+@media (min-width: 400px) {
+  .race-card-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .race-card-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .view-details-button, .find-similar-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Removed fixed height as we're using aspect ratio now */
+}
+}
