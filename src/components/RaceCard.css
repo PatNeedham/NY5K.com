@@ -134,6 +134,7 @@
 
 .view-details-button:hover {
   background-color: #2563eb;
+  color: white;
 }
 
 .find-similar-button {
@@ -169,5 +170,4 @@
 
 @media (max-width: 768px) {
   /* Removed fixed height as we're using aspect ratio now */
-}
 }
