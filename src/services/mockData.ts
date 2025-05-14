@@ -1,6 +1,6 @@
 import { Race, RaceDetail, User, Review } from '../types';
+import raceMapImage from '../assets/raceMap.png';
 
-// Import mock data directly
 const mockData = {
   "races": [
     {
@@ -78,7 +78,7 @@ const mockData = {
     {
       "id": 1,
       "raceId": 1,
-      "courseThumbnail": "https://images.unsplash.com/photo-1600975815238-1be84b60e1b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "courseThumbnail": raceMapImage,
       "courseDescription": "This 5K course loops around the southern portion of Central Park, starting and finishing near Tavern on the Green. The course includes rolling hills through beautiful scenery with plenty of shade from the park's mature trees.",
       "ageGroupCategories": ["Under 18", "19-29", "30-39", "40-49", "50-59", "60+"],
       "specialPrizes": ["Top 3 Overall", "Age Group Winners", "Team Competition"],
@@ -104,7 +104,7 @@ const mockData = {
     {
       "id": 2,
       "raceId": 2,
-      "courseThumbnail": "https://images.unsplash.com/photo-1655377239795-cdd7f9dc53e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "courseThumbnail": raceMapImage,
       "courseDescription": "This inaugural race takes runners across the iconic Brooklyn Bridge and through the streets of Brooklyn. Participants will enjoy unparalleled views of the Manhattan skyline and East River during this unique urban 5K.",
       "ageGroupCategories": ["Under 18", "19-29", "30-39", "40-49", "50-59", "60+"],
       "specialPrizes": ["Top 3 Overall", "Age Group Winners", "Best Brooklyn-themed Costume"],
@@ -113,7 +113,7 @@ const mockData = {
     {
       "id": 3,
       "raceId": 3,
-      "courseThumbnail": "https://images.unsplash.com/photo-1534787300217-a325a72e3c8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "courseThumbnail": raceMapImage,
       "courseDescription": "This Albany 5K follows a scenic route along the Hudson River, featuring historic sites and beautiful waterfront views. The relatively flat course makes it perfect for runners of all levels.",
       "ageGroupCategories": ["Under 18", "19-29", "30-39", "40-49", "50-59", "60+"],
       "specialPrizes": ["Top 3 Overall", "Age Group Winners", "Local Resident Award"],
@@ -131,7 +131,7 @@ const mockData = {
     {
       "id": 4,
       "raceId": 4,
-      "courseThumbnail": "https://images.unsplash.com/photo-1517776832751-0a7e6993de03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "courseThumbnail": raceMapImage,
       "courseDescription": "The Syracuse Lakeview Loop Challenge circles the beautiful Onondaga Lake with stunning views throughout the entire course. Runners will enjoy a mostly flat terrain with small rolling hills and plenty of water stations.",
       "ageGroupCategories": ["Under 18", "19-29", "30-39", "40-49", "50-59", "60+"],
       "specialPrizes": ["Top 3 Overall", "Age Group Winners", "Syracuse University Alumni Award"],
@@ -157,7 +157,7 @@ const mockData = {
     {
       "id": 5,
       "raceId": 5,
-      "courseThumbnail": "https://images.unsplash.com/photo-1598968326685-35ca9d1c50ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "courseThumbnail": raceMapImage,
       "courseDescription": "The Buffalo Canalside Sprint Fest takes runners through Buffalo's revitalized waterfront district and historic canal area. This completely flat course is perfect for setting a personal record while enjoying the city's renaissance.",
       "ageGroupCategories": ["Under 18", "19-29", "30-39", "40-49", "50-59", "60+"],
       "specialPrizes": ["Top 3 Overall", "Age Group Winners", "Buffalo Bills Fan Award"],

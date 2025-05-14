@@ -7,7 +7,6 @@ interface RaceCardProps {
 }
 
 const RaceCard = ({ race }: RaceCardProps) => {
-  // Format date
   const formattedDate = new Date(race.date).toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',

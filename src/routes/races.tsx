@@ -21,7 +21,6 @@ export default function RacesPage() {
     inaugural: false,
   });
   
-  // Fetch races data
   useEffect(() => {
     async function fetchRaces() {
       try {
@@ -42,13 +41,11 @@ export default function RacesPage() {
     fetchRaces();
   }, []);
   
-  // Filter races when races array or filters change
   useEffect(() => {
     if (!races.length) return;
     
     let results = [...races];
     
-    // Filter by search term
     if (filters.search) {
       const searchTerm = filters.search.toLowerCase();
       results = results.filter(race => 
@@ -57,22 +54,18 @@ export default function RacesPage() {
       );
     }
     
-    // Filter by upcoming
     if (filters.upcoming) {
       results = results.filter(race => new Date(race.date) >= new Date());
     }
     
-    // Filter by registration status
     if (filters.registrationOpen) {
       results = results.filter(race => race.registrationOpen);
     }
     
-    // Filter by inaugural status
     if (filters.inaugural) {
       results = results.filter(race => race.inaugural);
     }
     
-    // Sort by date
     results.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
     
     setFilteredRaces(results);

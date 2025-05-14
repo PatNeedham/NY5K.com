@@ -1,3 +1,4 @@
+import React from 'react';
 import { Review, User } from '../types';
 import './RaceReview.css';
 
@@ -16,7 +17,7 @@ const RaceReview = ({ review, user }: RaceReviewProps) => {
   
   // Generate stars for rating
   const renderStars = () => {
-    const stars = [];
+    const stars: React.ReactElement[] = [];
     const fullStars = Math.floor(review.rating);
     const hasHalfStar = review.rating % 1 >= 0.5;
     

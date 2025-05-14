@@ -16,7 +16,6 @@ console.log("VITE_USE_MOCK_DATA:", import.meta.env.VITE_USE_MOCK_DATA);
 // Double check for both string 'true' and boolean true for maximum compatibility
 const USE_MOCK_DATA = 
   import.meta.env.VITE_USE_MOCK_DATA === 'true' || 
-  import.meta.env.VITE_USE_MOCK_DATA === true || 
   import.meta.env.MODE === 'mock';
 const API_URL = 'http://localhost:8000';
 

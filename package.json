@@ -7,7 +7,7 @@
     "dev": "vite",
     "dev:mock": "vite --mode mock",
     "build": "tsc && vite build",
-    "build-with-mock-data": "vite build --mode mock",
+    "build-with-mock-data": "node scripts/copy-assets.js && tsc && vite build --mode mock",
     "preview": "vite preview",
     "preview:mock": "vite preview --mode mock",
     "mock-api": "json-server --watch mock-api/db.json --port 8000",

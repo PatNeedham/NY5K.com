@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { addReview } from '../services/api';
 import { useAuth } from '../layouts/RootLayout';
 import './ReviewForm.css';
@@ -53,7 +53,7 @@ const ReviewForm = ({ raceId, onReviewSubmitted }: ReviewFormProps) => {
   
   // Generate star rating UI
   const renderRatingStars = () => {
-    const stars = [];
+    const stars: React.ReactElement[] = [];
     
     for (let i = 1; i <= 5; i++) {
       stars.push(
